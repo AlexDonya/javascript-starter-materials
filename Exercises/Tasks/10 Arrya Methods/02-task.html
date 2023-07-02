@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <pre>
+        Задание:
+        Напишите сценарий, который будет запрашивать у пользователя значения, до тех пор, пока тот не введет значение stop
+        Все введенные значения, если они являются числом, должны быть добавлены в массив.
+        После того, как пользователь ввел значение стоп, посчитайте сумму всех значений, которые находятся в массиве.
+    </pre>
+    <script>
+        let arr = [];
+        let value;
+        do {
+            value = prompt('Введите своё значение:');
+            let num = Number(value);
+            if (typeof (num) === "number") {
+                arr.push(num);
+            }
+        } while (value !== 'stop');
+        console.log(arr);
+
+        let arrWithoutNaN = arr.filter(Boolean);
+        console.log(arrWithoutNaN);
+
+        let sumArr = 0;
+        for (let value of arrWithoutNaN) {
+            sumArr += value;
+        }
+
+        alert(`Сумма всех чисел будет: ${sumArr}`);
+        console.log(sumArr);
+    </script>
+</body>
+
+</html>

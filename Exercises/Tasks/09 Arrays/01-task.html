@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Напишите сценарий, который найдет минимальное, максимальное значения массива, а также выведет сумму всех элементов массива.
+    </pre>
+    <script>
+        let arr = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
+        arr.sort((a, b) => {
+            return a - b;
+        })
+        console.log(arr);
+
+        // let minValue = Math.min.apply(null, arr);
+        // let maxValue = Math.max.apply(null, arr);
+        
+        let minValue = arr[0];
+        let maxValue = arr[arr.length - 1];
+        let summValues = 0;
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     summValues += arr[i];
+        // }
+        // console.log(summValues);
+
+        for (let value of arr) {
+            summValues += value;
+        }
+        console.log(summValues);
+        console.log(minValue);
+        console.log(maxValue);
+
+    </script>
+</body>
+</html>

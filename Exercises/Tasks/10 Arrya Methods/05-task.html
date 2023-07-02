@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <pre>
+        Задание:
+        Перепишите код так, чтобы значения для массива count задавались пользователем.
+        Посчитайте стоимость покупок. Выведите сколько было потрачено на каждый продукт по отдельности и сколько потрачено в общем.
+    </pre>
+    <script>
+        // названия товаров
+        let names = [];
+        names[0] = "Бумага офисная А4, 80 г/м2, 500 л";
+        names[1] = "Биндеры для бумаги 51 мм";
+        names[2] = "Ручка шариковая синяя";
+
+        // цены на товар
+        let prices = [];
+        prices[0] = 280.25; // Бумага офисная А4, 80 г/м2, 500 л
+        prices[1] = 56;     // Биндеры для бумаги 51 мм
+        prices[2] = 12.50;  // Ручка шариковая синяя
+
+        let count = [];
+        count[0] = +prompt(`Введите кол-во сколько бы Вы хотели приобрести "${names[0]}":`);   // Бумага офисная А4, 80 г/м2, 500 л
+        count[1] = +prompt(`Введите кол-во сколько бы Вы хотели приобрести "${names[1]}":`);  // Биндеры для бумаги 51 мм
+        count[2] = +prompt(`Введите кол-во сколько бы Вы хотели приобрести "${names[2]}":`);  // Ручка шариковая синяя
+
+        console.log(count);
+
+        let costNameOne = prices[0] * count[0];
+        let costNameTwo = prices[1] * count[1];
+        let costNameThree = prices[2] * count[2];
+        let totalCost = costNameOne + costNameTwo + costNameThree;
+
+        console.log(`Всего потрачено ${totalCost}грн на все товары`);
+        console.log(`На ${names[0]} Вы потратили ${costNameOne}грн`);
+        console.log(`На ${names[1]} Вы потратили ${costNameTwo }грн`);
+        console.log(`На ${names[2]} Вы потратили ${costNameThree}грн`);
+
+        alert(`Всего потрачено ${totalCost}грн на все товары`);
+        alert(`На ${names[0]} Вы потратили ${costNameOne}грн`);
+        alert(`На ${names[1]} Вы потратили ${costNameTwo }грн`);
+        alert(`На ${names[2]} Вы потратили ${costNameThree}грн`);
+    </script>
+</body>
+
+</html>
