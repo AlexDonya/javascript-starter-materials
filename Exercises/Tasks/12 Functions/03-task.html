@@ -13,15 +13,26 @@
         Замените в коде все функции-выражения на стрелочные функции.
     </pre>
     <script>
-        var data = [1, 2, 3, 4, 5];
+        let data = [1, 2, 3, 4, 5];
 
-        var result = data.map(function (value) {
+        let result = data.map((value) => {
             return value * value;
         });
+        console.log(result);
 
-        result.forEach(function(e) {
+        result.forEach((e) => {
             console.log(e);
         });
+
+        // let data = [1, 2, 3, 4, 5];
+
+        // let result = data.map(function (value) {
+        //     return value * value;
+        // });
+
+        // result.forEach(function (e) {
+        //     console.log(e);
+        // });
     </script>
 </body>
 

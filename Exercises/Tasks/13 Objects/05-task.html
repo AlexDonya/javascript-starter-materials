@@ -454,6 +454,42 @@
                 favoriteFruit: 'apple'
             }
         ];
+
+        // Задание:
+        // Все объекты в массиве users имеют одинаковую структуру. 
+        // Выведите на экран:
+        // 1) Адреса электронной почты всех пользователей (email)
+        // 2) Имя и фамилию пользователей с наибольшим количеством друзей (свойства name и friends)
+        // 3) Компанию пользователя с наибольшим балансом и компанию пользователя с наименьшим балансом (свойства company и balance)
+
+        console.log('emails:');
+        for (let user of users) {
+            console.log('email: ' + user.email);
+        }
+
+        console.log('');
+        console.log('Names and quantity of friends:');
+        for (let user of users) {
+
+            if (user.friends.length > 8) {
+                console.log(user.name.first + ' ' + user.name.last + ', have friends: ' + user.friends.length);
+            }
+        }
+
+        console.log('');
+        console.log('Company and balance:');
+        let balances = [];
+        for (let user of users) {
+            balances.push(Number(user.balance));
+            // console.log('Company: ' + user.company + ' ' + ', balance: ' + user.balance);
+        }
+        // console.log(balances);
+        let maxBalance = Math.max.apply(null, balances);
+        console.log('Company: ' + users[1].company + ' ' + ', max-balance: ' + maxBalance);
+
+        let minBalance = Math.min.apply(null, balances);
+        console.log('Company: ' + users[2].company + ' ' + ', min-balance: ' + minBalance);
+
     </script>
 </body>
 

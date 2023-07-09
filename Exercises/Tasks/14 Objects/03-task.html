@@ -14,23 +14,41 @@
         Воспользуйтесь фабричным методом для инициализации массива.
     </pre>
     <script>
-        let products = [
-            {
-                name: "Бумага офисная А4, 80 г/м2, 500 л",
-                price: 280.25,
-                ordered: 0
-            },
-            {
-                name: "Биндеры для бумаги 51 мм",
-                price: 56,
-                ordered: 0
-            },
-            {
-                name: "Ручка шариковая синяя",
-                price: 12.5,
-                ordered: 0
+        function createPoduct(name, price, ordered) {
+            return {
+                name: name,
+                price: price,
+                ordered: ordered,
             }
-        ];
+        }
+
+        let paper = createPoduct("Бумага офисная А4, 80 г/м2, 500 л", 280.25, 0),
+            binders = createPoduct("Биндеры для бумаги 51 мм", 56, 0),
+            pen = createPoduct("Ручка шариковая синяя", 12.5, 0);
+
+        console.log(paper);
+        console.log(binders);
+        console.log(pen);
+
+        let products = [paper, binders, pen];
+
+        // let products = [
+        //     {
+        //         name: "Бумага офисная А4, 80 г/м2, 500 л",
+        //         price: 280.25,
+        //         ordered: 0
+        //     },
+        //     {
+        //         name: "Биндеры для бумаги 51 мм",
+        //         price: 56,
+        //         ordered: 0
+        //     },
+        //     {
+        //         name: "Ручка шариковая синяя",
+        //         price: 12.5,
+        //         ordered: 0
+        //     }
+        // ];
 
         // цикл для получения количества покупаемых продуктов
         for (let index = 0; index < products.length; index++) {

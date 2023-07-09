@@ -13,50 +13,39 @@
         Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
     </pre>
     <script>
-        let arr = [1, 2, 6, 3, 11, 1, 3, 2, 4, 15, 5, 9, 5, 10, 6, 9, 8, 4];
+        let arr = [1, 2, 5, 3, 11, 1, 3, 2, 3, 15, 5, 9, 5, 10, 6, 9, 8, 4];
         console.log(arr);
+        let arr2 = [1, 3, 11, 12, 33, 2, 8, 15, 6, 13, 5, 10, 7, 9, 18, 4];
+        console.log(arr2);
 
         function checkArr(arr) {
             let newArr = [];
-            // let unrepeat = 0;
-            // let repeat = 0;
-            // let delRepeat = 0;
 
             for (let i = 0; i < arr.length; i++) {
                 for (let j = i + 1; j < arr.length; j++) {
                     if (arr[i] === arr[j]) {
                         newArr.push(arr[i]);
-                        // repeat = repeat + 1;
                     }
 
                     for (let i = 0; i < newArr.length; i++) {
                         for (let j = i + 1; j < newArr.length; j++) {
                             if (newArr[i] === newArr[j]) {
                                 newArr.splice(i, 1);
-                                // delRepeat = delRepeat + 1;
                             }
                         }
                     }
                 }
+            }
 
-                // for (let j = i + 1; j < arr.length; j++) {
-                //     if (arr[i] !== arr[j]) {
-                //         unrepeat = unrepeat + 1;
-                //     }
-                // }
+            if (newArr.length > 0) {
+                return newArr;
+            } else {
+                return null;
             }
-            // console.log(unrepeat);
-            // console.log(repeat);
-            // console.log(delRepeat);
-            
-            let unrepeat = arr.length - newArr.length;
-            for (let i = 0; i < unrepeat; i++) {
-                newArr.push(null);
-            }
-            return newArr;
         }
 
         console.log(checkArr(arr));
+        console.log(checkArr(arr2));
     </script>
 </body>
 

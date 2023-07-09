@@ -1,17 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task X</title>
 </head>
+
 <body>
     <pre>
         Задание:
         Запросите у пользователя число. Выведите все числа в обратном порядке от введенного пользователем значения до 1. Используйте для решения рекурсию.
     </pre>
     <script>
+        let num = +prompt('Введите любое положительное число:');
+
+        function func(num) {
+            // let arr = [];
+
+            // if (num == 1) {
+            //     arr.push(num);
+            //     return arr;
+            // } else if (num > 1) {
+            //     for (let i = num; i >= 1; i--) {
+            //         arr.push(i);
+            //     }
+            //     return arr;
+            // }
+
+            if (num == 1) {
+                // arr.push(num);
+                return 1;
+            } else if (num > 1) {
+                console.log(num);
+                num--;
+                func(num);
+                return 1;
+            }
+        }
+
+        console.log(func(num));
+
+        // function numberOutput(n) {
+        //     return (n > 1) ? `${n}, ${numberOutput(n - 1)}` : 1;
+        // }
+        // console.log(numberOutput(num));
+
         
+        // let num = +prompt('Введите любое число');
+        // let degree = +prompt('Введите любую степень');
+
+        // function pow(x, n) {
+
+        //     if (n == 1) {
+        //         return x;
+        //     } else {
+        //         return x * pow(x, n - 1);
+        //     }
+        // }
+
+        // console.log(pow(num, degree));
     </script>
 </body>
+
 </html>

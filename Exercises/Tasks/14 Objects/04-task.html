@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task X</title>
 </head>
+
 <body>
     <pre>
         Задание:
@@ -13,23 +15,42 @@
         Используйте shorthand методы и shorthand свойства.        
     </pre>
     <script>
-        let obj1 = {
-            firstName: "Ivan",
-            lastName: "Ivanov"
-        };
+        function createObj(firstName, lastName) {
+            return {
+                firstName: firstName,
+                lastName: lastName,
 
-        let obj2 = {
-            firstName: "Jhon",
-            lastName: "Doe"
-        };
-
-        function print(obj) {
-            console.log("First Name: " + obj.firstName);
-            console.log("Last Name: " + obj.lastName);
+                print: function () {
+                    console.log("First Name: " + this.firstName);
+                    console.log("Last Name: " + this.lastName);
+                }
+            }
         }
 
-        print(obj1);
-        print(obj2);
+        let obj1 = createObj("Ivan", "Ivanov");
+        let obj2 = createObj("Jhon", "Doe");
+
+        obj1.print();
+        obj2.print();
+
+        // let obj1 = {
+        //     firstName: "Ivan",
+        //     lastName: "Ivanov"
+        // };
+
+        // let obj2 = {
+        //     firstName: "Jhon",
+        //     lastName: "Doe"
+        // };
+
+        // function print(obj) {
+        //     console.log("First Name: " + obj.firstName);
+        //     console.log("Last Name: " + obj.lastName);
+        // }
+
+        // print(obj1);
+        // print(obj2);
     </script>
 </body>
+
 </html>

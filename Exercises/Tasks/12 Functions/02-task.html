@@ -30,7 +30,7 @@
         initCountArray();
         calculateSum();
 
-        let initCountArray = function () {
+        function initCountArray() {
             for (let i = 0; i < names.length; i++) {
                 const productName = names[i];
                 let counttoBuy = +prompt("Укажите количество для " + productName);
@@ -42,7 +42,7 @@
             }
         }
 
-        let calculateSum = function () {
+        function calculateSum() {
             let totalSum = 0;
             for (let i = 0; i < names.length; i++) {
                 const productName = names[i];
